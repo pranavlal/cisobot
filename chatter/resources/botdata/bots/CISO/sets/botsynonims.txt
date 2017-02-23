@@ -1,0 +1,162 @@
+robot
+3D Human
+ACE
+AI Agent
+Animated Avatar
+Animated Interface Agent
+Animated Pedagogical Agent
+Animated Talking Avatar
+Anthropomorphic Agent
+Anthropomorphic Dialog Agent
+Anthropomorphic Interface Agent
+Anthropomorphic Spoken Dialog Agent
+Artificial Brand Agent (ABA)
+Artificial Character
+Artificial Conversational Entity
+Artificial Human
+Artificial Intelligence Chatbot
+Artificial Linguistic Entity
+Artificial People
+Artificial Person
+Artificial Talking Head
+Automated Agent
+Automated Attendant
+Automated Chat Agent
+Automated Chat Sales Associate
+Automated Question Answering System
+Automated Sales Agent
+Automated Virtual Agent
+Avatar
+Believable Agent
+Bot
+Brand Agent
+Brand Buddy
+Brand Butler
+Brand Character
+Branded Agent
+Chat Agent
+Chat Bot
+Chat Robot
+Chatbot
+Chatterbot
+Chatterbox
+Cognitive Agent
+Computerized Avatar
+Computerized Virtual Person
+Conversation Agent
+Conversational Agent
+Conversational Assistant
+Conversational Avatar
+Conversational Character
+Conversational Computer
+Conversational Humanoid
+Conversational Interface
+Conversational Pedagogical Agent
+Conversational Personal Assistant
+Conversational System
+Conversational User Interface
+Conversive Agent
+Customer Service Agent
+Cyber Individual
+Desktop Mate
+Dialog Management System
+Dialog System
+Digital Animated Avatar
+Digital Employee
+e-Rep
+ECA
+Electronic Virtual Interactive Entity
+Embodied Virtual Character
+Embodied Agent
+Embodied Cognitive Agent
+Embodied Communicational Agent
+Embodied Conversational Agent
+Embodied Conversational Assistant
+Embodied Conversational Character
+Embodied Conversational Interface Agent
+Embodied Pedagogical Agent
+Embodied Pedagogical Character
+Fully Embodied Conversational Avatar
+Intelligent Agent
+Intelligent Answering Machine
+Intelligent Conversational Assistant
+Intelligent Conversational Avatar
+Intelligent Talking Agent
+Intelligent User Interface
+Intelligent Virtual Agent
+Intelligent Virtual Assistant
+Intellitar
+Interaction system
+Interactive Agent
+Interactive Conversational Assistant
+Interactive Embodied Agent
+Interactive Online Character
+Interactive Talking Program
+Interactive Virtual Agent
+Interactive Voice Response
+IVA
+IVR
+Language Bot
+Lifelike Animated Character
+Mascot
+Natural Language System
+Online Chat Agent
+Pedagogic Conversational Agent
+Pedagogical Agent Persona
+Pedagogical Conversational Agent
+Relational Agent
+Screen Mate
+Self Service Agent
+Service Agent
+Smart Virtual Assistant
+Smartbot
+Sociable Agent
+Synthetix Agent
+Talk Bot
+Talking 3D Avatar
+Talking Agent
+Talking Avatar
+Talking Head
+Teachable Agent
+v-Rep
+VDA
+Virtual Advisor
+Virtual Agent
+Virtual Assistant
+Virtual Avatar
+Virtual Call Center Agent
+Virtual Call Centre Agent
+Virtual Chat Agent
+Virtual Chat Expert
+Virtual Coach
+Virtual Consultant
+Virtual Conversational Agent
+Virtual Customer Agent
+Virtual Customer Service Agent
+Virtual Customer Support Agent
+Virtual Digital Assistant
+Virtual Employee
+Virtual Expert
+Virtual Guide
+Virtual Help Desk
+Virtual Host
+Virtual Hostess
+Virtual Human
+Virtual Human Agent
+Virtual Human Avatar
+Virtual Human Persona
+Virtual Online Assistant
+Virtual Pedagogical Agent
+Virtual People
+Virtual Person
+Virtual Personal Assistant
+Virtual Reality Avatar
+Virtual Representative
+Virtual Robot
+Virtual Sales Agent
+Virtual Sales Rep
+Virtual Specialist
+Virtual Support Agent
+Virtual Teacher
+Virtual Tutor
+Web Agent

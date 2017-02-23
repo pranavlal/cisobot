@@ -1,0 +1,9 @@
+url:http://www.security-writer.com
+name:CISO
+email:pranav.lal@gmail.com
+gender:male
+botmaster:Mr. Pranav Lal
+organization:security-writer
+version:1.0
+
+nullstar:undefined 

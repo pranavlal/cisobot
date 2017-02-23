@@ -1,0 +1,6 @@
+package httprq
+class HttpRequestManager 
+system action searchDuckduckgo(text st) returns text    
+
+        
+    end

@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- File: ciso.aiml -->
+  <!-- Author: Mr. Pranav Lal -->
+  <!-- Last modified: September 23, 2016 -->
+  <!--  -->
+  <!-- This AIML file is part of the CISO 1.0 chat bot knowledge base. -->
+  <!--  -->
+  <!-- The CISO brain is Copyright &copy; 2016 by security-writer. -->
+  <!--  -->
+  <!-- The CISO brain is released under the terms of the GNU Lesser General -->
+  <!-- Public License, as published by the Free Software Foundation. -->
+  <!--  -->
+  <!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+  <!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+  <!--  -->
+  <!-- For more information see http://www.security-writer.com -->
+  <!--The profanity and insults sections have been taken from super's brain which comes with Program-AB-->
+<!--categories and topics to hamdle unknown values-->
+<category>
+<pattern>*</pattern>
+<template>
+<think>
+<set name="topic">noanswer</set>
+</think>
+<srai><input></input></srai>
+</template>
+</category>
+  <topic name="noanswer">
+  <category>
+  <pattern><set>questionwords</set> * <set>infosecvocabulary</set></pattern>
+  <template>
+    <think>
+  <set name="topic">unknown</set>
+  </think>
+  unknown
+  </template>
+  </category>
+<category>
+<pattern>*</pattern>
+<template>
+<think>
+<set name="topic">unknown</set>
+</think>
+
+I am best at answering questions about information security
+</template>
+</category>
+  </topic>
+  
+  <!--end of categories and topics to hamdle unknown values-->
+  <!--infosec part starts here-->
+  
+    <category>
+      <pattern>WHAT IS <SET>SECURITYSYNONYMS</SET> SECURITY</pattern>
+        <template>
+The collection of technologies, processes, and practices that protect networked computer systems from unauthorized use or harm.
+ </template>
+</category>
+    <category>
+      <pattern>WHAT IS INFORMATION SECURITY</pattern>
+      <template>information security relates to the confidentiality, integrity and availability of data irrespective of whether it is physical or digital.</template>
+    </category>
+    <category>
+      <pattern>WHAT IS A CYBER ATTACK</pattern>
+      <template>a cyber attack is  An offensive action by a malicious actor that is intended to undermine the functions of networked computers and their related resources, including unauthorized access, unapproved changes, and malicious destruction.</template>
+    </category>
+    <category>
+      <pattern>WHAT ARE SOME EXAMPLES OF CYBER ATTACKS</pattern>
+      <template>a denialof service attack, man in the middle attack, a distributed denial of service attack, brute forcing of credentials, hash collisions</template>
+    </category>
+    <category>
+      <pattern>WHAT ARE THE PROSPECTS IN CYBER SECURITY</pattern>
+      <template>the prospects are good especially if you can be specific in one area such as penitration testing, code quality review etc at least to start with. also see<a href="http://krebsonsecurity.com/tag/security-career-advice/">This collection of advice from Brian Crebs</a></template>
+    </category>
+    <category>
+      <pattern>HOW DO I LEARN CYBER SECURITY</pattern>
+      <template>start by reading and then setup a lab where you can try fundamentals in a safe environment</template>
+    </category>
+    <category>
+      <pattern>WHAT IS A CYBER THREAT</pattern>
+      <template>a cyber threat is the probability of a cyber attack</template>
+    </category>
+    <category>
+      <pattern>WHAT IS A RISK ASSESSMENT</pattern>
+      <template>estimating the probability of a threat agent exploiting that threat</template>
+    </category>
+    <category>
+      <pattern>WHAT IS A THREAT AGENT</pattern>
+      <template>a threat agent is an acter who will exploit a threat</template>
+    </category>
+    <category>
+      <pattern>WHAT IS HACKING</pattern>
+      <template>see this page for a definition of hacking.
+<a href="http://www.dictionary.com/browse/hacking">hack-ing</a>
+in the context of computers, it commonly refers to gaining unauthorized access to a computer. However, it is also used to indicate a bit of work that involves deep knowledge of computer systems or that involves using programming tricks</template>
+    </category>
+    <category>
+      <pattern>WHAT SKILLS DO I NEED TO BECOME A HACKER</pattern>
+      <template>curiosity and persistance. Technology skills depend on what you want to hack. For example, if you want to hack a web application, learn how HTML and underlying frameworks function. If you want to break into a linux machine, learn protocol stacks and the workings of operating systems</template>
+    </category>
+    <category>
+      <pattern>WHAT IS THE BEST WAY TO LEARN HACKING?</pattern>
+      <template>Setup a home lab using virtual machines and read books that provide hands on examples and try them</template>
+    </category>
+    <category>
+ <pattern>what keeps you awake at night</pattern>
+  <template>
+    One of the things that I do is to constantly look for enterprise wide  patterns of events that are precursers to an attack. These go beyond individual tools. Thret intelligence plays a key role here along with event corelation. I am not only talking about feeds that tools provide but also tracking social media and the conversations that stake holders are having about the company. I have an incident management framework in place to handle a crisis.</template></category><category><pattern>How do you stay updated</pattern><template>I track several blogs and industry forums as well as social media to stay updated on vulnerabilities, large attacks irrespective of thevictim's domain. I maintain a strong interface with product vendors to stay updated with the latest fixes in their products.
+</template>
+</category>
+    <category>
+      <pattern>WHO IS A SCRIPT KIDDY</pattern>
+      <template>A person who does not have deep knowledge of systems but uses tools to break into computer systems or networks</template>
+    </category>
+    <category>
+      <pattern>WHO IS A WHITE HAT *</pattern>
+      <template>An ethical hacker who utilizes his skills to help</template>
+    </category>
+    <category>
+      <pattern>WHO IS A BLACK HAT HACKER *</pattern>
+      <template>Most hackers do not wear hats. a black hat hacker is an individual who breaches computers or network for malicious ends.</template>
+    </category>
+    <category>
+      <pattern>WHO IS A GRAY HAT HACKER *</pattern>
+      <template>a gray hat hacker is an individual who make at times break the law or violate typical standards of behaviour when breaching computer systems. However, the intent behind the the violations is not malicious.</template>
+    </category>
+    <category>
+	<pattern>what is cyber security</pattern>
+<template>
+Cyber security deals with protecting digital information usually on the Internet against attacks orcestrated via other computers or networks of computers or similar devices.
+</template>
+	</category>
+	<category>
+      <pattern>WHAT IS IT SECURITY</pattern>
+      <template>
+        <srai>WHAT IS CYBER SECURITY</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>WHAT IS CLOUD COMPUTING</pattern>
+      <template>Cloud computing is an umbrela term that means different things to different people. in its simplest form, it means on demand access to computing resources that is elastic and scalable without human intervention. This also means that the use of these resources is measured.<a href="http://www.service-architecture.com/articles/cloud-computing/cloud_computing_definition.html">Cloud Computing Definition</a></template>
+    </category>
+    <category>
+      <pattern>WHO IS A HACKER</pattern>
+      <template>An individual who uses system features in a way they were not designed for or someone who knows a system intimately and is able to use that knowledge in novel ways. Yes, some individuals do break into computer systems.</template>
+    </category>
+    <category>
+      <pattern> what is Access Control</pattern>
+      <template>
+               Access Control ensures that resources are only granted to those
+               users who are entitled to them.
+</template>
+    </category>
+    <category>
+      <pattern> what is an Access Control List or ACL</pattern>
+      <template>
+               A mechanism that implements access control for a system resource
+               by listing the identities of the system entities that are
+               permitted to access the resource.
+</template>
+    </category>
+    <category>
+      <pattern> what is an Access Control Service</pattern>
+      <template>
+               A security service that provides protection of system resources
+               against unauthorized access. The two basic mechanisms for
+               implementing this service are ACLs and tickets.
+</template>
+    </category>
+    <category>
+      <pattern> what is Access Management</pattern>
+      <template>
+               Access Management is the maintenance of access information which
+               consists of four tasks: account administration, maintenance,
+               monitoring, and revocation.
+</template>
+    </category>
+    <category>
+      <pattern> what is an Access Matrix</pattern>
+      <template>
+               An Access Matrix uses rows to represent subjects and columns to
+               represent objects with privileges listed in each cell.
+</template>
+    </category>
+    <category>
+      <pattern> what is Account Harvesting</pattern>
+      <template>
+               Account Harvesting is the process of collecting all the legitimate
+               account names on a system.
+</template>
+    </category>
+    <category>
+      <pattern> what is ACK Piggybacking</pattern>
+      <template>
+               ACK piggybacking is the practice of sending an ACK or
+               acknowledgement inside another packet going to the same
+               destination.
+</template>
+    </category>
+    <category>
+      <pattern> what is Active Content</pattern>
+      <template>
+               Program code embedded in the contents of a web page. When the page
+               is accessed by a web browser, the embedded code is automatically
+               downloaded and executed on the user's workstation. Examples of
+               active content technologies include Java applets, ActiveX controls
+</template>
+    </category>
+    <category>
+      <pattern> what are Activity Monitors</pattern>
+      <template>
+               Activity monitors aim to prevent virus infection by looking for
+               for malicious activity on a system, and blocking that activity
+               when possible.
+</template>
+    </category>
+    <category>
+      <pattern> what is Address Resolution Protocol or ARP</pattern>
+      <template>
+               Address Resolution Protocol (ARP) is a protocol for mapping an
+               Internet Protocol address to a physical machine address that is
+               recognized in the local network. A table, usually called the ARP
+               cache, is used to maintain a correlation between each MAC address
+               and its corresponding IP address. ARP provides the protocol rules
+               for making this correlation and providing address conversion in
+               both directions.
+</template>
+    </category>
+    <category>
+      <pattern> what is Advanced Encryption Standard or AES</pattern>
+      <template>
+               An encryption standard being developed by NIST. Intended to
+               specify an unclassified, publicly-disclosed, symmetric encryption
+               algorithm.
+</template>
+    </category>
+    <category>
+      <pattern> what is an Algorithm</pattern>
+      <template>
+               A finite set of step-by-step instructions for a problem-solving or
+               computation procedure, especially one that can be implemented by a
+               computer.
+</template>
+    </category>
+    <category>
+      <pattern> what is an Applet</pattern>
+      <template>
+               Java programs; an application program that uses the client's web
+               browser to provide a user interface.
+</template>
+    </category>
+    <category>
+      <pattern> what is the ARPANET</pattern>
+      <template>
+               Advanced Research Projects Agency Network, a pioneering
+               packet-switched network that was built in the early 1970s under
+               contract to the US Government, led to the development of
+               today&amp;#039;s Internet, and was decommissioned in June 1990.
+</template>
+    </category>
+    <category>
+      <pattern> what is Asymmetric Cryptography</pattern>
+      <template>
+               Public-key cryptography; A modern branch of cryptography in which
+               the algorithms employ a pair of keys (a public key and a private
+               key) and use a different component of the pair for different steps
+               of the algorithm.
+</template>
+    </category>
+    <category>
+      <pattern> what is Asymmetric Warfare</pattern>
+      <template>
+               Asymmetric warfare is the fact that a small investment of the attacker, properly leveraged, can yield incredible results.
+</template>
+    </category>
+    <category>
+      <pattern> what is Auditing</pattern>
+      <template>
+               Auditing in the context of information security is the information
+               gathering and analysis of assets to ensure such things as policy
+               compliance and security from vulnerabilities.
+</template>
+    </category>
+    <category>
+      <pattern> what is Authentication</pattern>
+      <template>
+               Authentication is the process of confirming the correctness of the
+               claimed identity.
+</template>
+    </category>
+    <category>
+      <pattern> what is Authenticity</pattern>
+      <template>
+               Authenticity is the validity and conformance of the original
+               information.
+</template>
+    </category>
+    <category>
+      <pattern> what is Authorization</pattern>
+      <template>
+               Authorization is the approval, permission, or empowerment for
+               someone or something to do something.
+</template>
+    </category>
+    <category>
+      <pattern> what is an Autonomous System</pattern>
+      <template>
+               One network or series of networks that are all under one
+               administrative control. An autonomous system is also sometimes
+               referred to as a routing domain. An autonomous system is assigned
+               a globally unique number, sometimes called an Autonomous System
+               Number (ASN).
+</template>
+    </category>
+    <category>
+      <pattern> what is Availability</pattern>
+      <template>
+               Availability is the need to ensure that the business purpose of
+               the system can be met and that it is accessible to those who need
+               to use it.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Backdoor</pattern>
+      <template>
+               A backdoor is a tool installed after a compromise to give an
+               attacker easier access to the compromised system around any
+               security mechanisms that are in place.
+</template>
+    </category>
+    <category>
+      <pattern> what is Bandwidth</pattern>
+      <template>
+               Commonly used to mean the capacity of a communication channel to
+               pass data through the channel in a given amount of time. Usually
+               expressed in bits per second.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Banner</pattern>
+      <template>
+               A banner is the information that is displayed to a remote user
+               trying to connect to a service. This may include version
+               information, system information, or a warning about authorized
+               use.
+</template>
+    </category>
+    <category>
+      <pattern> what is Basic Authentication</pattern>
+      <template>
+               Basic Authentication is the simplest web-based authentication
+               scheme that works by sending the username and password with each
+               request.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Bastion Host</pattern>
+      <template>
+               A bastion host has been hardened in anticipation of
+               vulnerabilities that have not been discovered yet.
+</template>
+    </category>
+    <category>
+      <pattern> what is BIND</pattern>
+      <template>
+               BIND stands for Berkeley Internet Name Domain and is an
+               implementation of DNS. DNS is used for domain name to IP address
+               resolution.
+</template>
+    </category>
+    <category>
+      <pattern> what is Biometrics</pattern>
+      <template>
+               Biometrics use physical characteristics of the users to determine
+               access.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Bit</pattern>
+      <template>
+               The smallest unit of information storage; a contraction of the
+               term "binary digit;" one of two symbolsѢ0" (zero) and "1" (one) -
+               that are used to represent binary numbers.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Block Cipher</pattern>
+      <template> A block cipher encrypts one block of data at a time.</template>
+    </category>
+    <category>
+      <pattern> what is a Boot Record Infector</pattern>
+      <template>
+               A boot record infector is a piece of malware that inserts
+               malicious code into the boot sector of a disk.
+</template>
+    </category>
+    <category>
+      <pattern> what is the Border Gateway Protocol or BGP</pattern>
+      <template>
+               An inter-autonomous system routing protocol. BGP is used to
+               exchange routing information for the Internet and is the protocol
+               used between Internet service providers (ISP).
+</template>
+    </category>
+    <category>
+      <pattern> what is a Botnet</pattern>
+      <template>
+               A botnet is a large number of compromised computers that are used
+               to create and send spam or viruses or flood a network with
+               messages as a denial of service attack.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Bridge</pattern>
+      <template>
+               A product that connects a local area network (LAN) to another
+               local area network that uses the same protocol (for example,
+               Ethernet or token ring).
+</template>
+    </category>
+    <category>
+      <pattern> what is British Standard 7799</pattern>
+      <template>
+               A standard code of practice and provides guidance on how to secure
+               an information system. It includes the management framework,
+               objectives, and control requirements for information security
+               management systems.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Broadcast</pattern>
+      <template>
+               To simultaneously send the same message to multiple recipients.
+               One host to all hosts on network.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Broadcast Address</pattern>
+      <template>
+               An address used to broadcast a datagram to all hosts on a given
+               network using UDP or ICMP protocol.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Browser</pattern>
+      <template>
+               A client computer program that can retrieve and display
+               information from servers on the World Wide Web.
+</template>
+    </category>
+    <category>
+      <pattern> what is Brute Force</pattern>
+      <template>
+               A cryptanalysis technique or other kind of attack method involving
+               an exhaustive procedure that tries all possibilities, one-by-one.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Buffer Overflow</pattern>
+      <template>
+               A buffer overflow occurs when a program or process tries to store
+               more data in a buffer (temporary data storage area) in a
+               computer's memory than it was intended to hold. Since buffers are
+               created to contain a finite amount of data, the extra information
+               - which has to go somewhere - can overflow into adjacent buffers,
+               corrupting or overwriting the valid data held in them.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Business Continuity Plan or BCP</pattern>
+      <template>
+               A Business Continuity Plan is the plan for emergency response,
+               backup operations, and post-disaster recovery steps that will
+               ensure the availability of critical resources and facilitate the
+               continuity of operations in an emergency situation.
+</template>
+    </category>
+    <category>
+      <pattern> what is Business Impact Analysis or BIA</pattern>
+      <template>
+               A Business Impact Analysis determines what levels of adverse
+               impact usually in the form of down time to a system are tolerable.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Byte</pattern>
+      <template>
+               A fundamental unit of computer storage; the smallest addressable
+               unit in a computer's memory.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cache</pattern>
+      <template>
+               Pronounced cash, a special high-speed storage mechanism. It can be
+               either a reserved section of main memory or an independent
+               high-speed storage device. Two types of caching are commonly used
+               in personal computers: memory caching and disk caching.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cache Cramming</pattern>
+      <template>
+               Cache Cramming is the technique of tricking a browser to run
+               cached Java code from the local disk, instead of the internet
+               zone, so it runs with less restrictive permissions.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cache Poisoning</pattern>
+      <template>
+               Malicious or misleading data from a remote name server is saved
+               cached by another name server. Typically used with DNS cache
+               poisoning attacks.
+</template>
+    </category>
+    <category>
+      <pattern> what Call Admission Control or CAC</pattern>
+      <template>
+               The inspection and control of all inbound and outbound voice
+               network activity by a voice firewall based on user-defined
+               policies.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Cell</pattern>
+      <template>
+               A cell is a unit of data transmitted over an ATM network.
+</template>
+    </category>
+    <category>
+      <pattern> what is Certificate Based Authentication</pattern>
+      <template>
+               Certificate-Based Authentication is the use of SSL and
+               certificates to authenticate and encrypt HTTP traffic.
+</template>
+    </category>
+    <category>
+      <pattern> what is CGI</pattern>
+      <template>
+               Common Gateway Interface. This mechanism is used by HTTP servers
+               (web servers) to pass parameters to executable scripts in order to
+               generate responses dynamically.
+</template>
+    </category>
+    <category>
+      <pattern> what is Chain of Custody</pattern>
+      <template>
+               Chain of Custody is the application of rules of evidence and its
+               handling. These differ across jurisdictions.
+</template>
+    </category>
+    <category>
+      <pattern>
+              what is the Challenge Handshake Authentication Protocol or CHAP
+    
+</pattern>
+      <template>
+               The Challenge-Handshake Authentication Protocol uses a
+               challenge/response authentication mechanism where the response
+               varies every challenge to prevent replay attacks.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Checksum</pattern>
+      <template>
+               A value that is computed by a function that is dependent on the
+               contents of a data object and is stored or transmitted together
+               with the object, for the purpose of detecting changes in the data.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Cipher</pattern>
+      <template>
+               A cryptographic algorithm for encryption and decryption.
+</template>
+    </category>
+    <category>
+      <pattern> what is Ciphertext</pattern>
+      <template>
+               Ciphertext is the encrypted form of the message being sent.
+</template>
+    </category>
+    <category>
+      <pattern> what is Circuit Switched Network</pattern>
+      <template>
+               A circuit switched network is where a single continuous physical
+               circuit connected two endpoints where the route was immutable once
+               set up.
+</template>
+    </category>
+    <category>
+      <pattern> what is Client</pattern>
+      <template>
+               A system entity that requests and uses a service provided by
+               another system entity, called a "server." In some cases, the
+               server may itself be a client of some other server.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Collision</pattern>
+      <template>
+               A collision occurs when multiple systems transmit simultaneously
+               on the same wire.
+</template>
+    </category>
+    <category>
+      <pattern> what is Competitive Intelligence</pattern>
+      <template>
+               Competitive Intelligence is espionage using legal, or at least not
+               obviously illegal, means.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Computer Emergency Response Team or CERT</pattern>
+      <template>
+               An organization that studies computer and network INFOSEC in order
+               to provide incident response services to victims of attacks,
+               publish alerts concerning vulnerabilities and threats, and offer
+               other information to help improve computer and network security.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Computer Network</pattern>
+      <template>
+               A collection of host computers together with the sub-network or
+               inter-network through which they can exchange data.
+</template>
+    </category>
+    <category>
+      <pattern> what is Confidentiality</pattern>
+      <template>
+               Confidentiality is the need to ensure that information is
+               disclosed only to those who are authorized to view it.
+</template>
+    </category>
+    <category>
+      <pattern> what is Configuration Management</pattern>
+      <template>
+               A process to Establish a known baseline condition and manage it.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Cookie</pattern>
+      <template>
+               A peace of text contained in a file to allow data exchanged
+               between an HTTP server and a browser (a client of the server) to
+               store state information on the client side and retrieve it later
+               for server use. An HTTP server, when sending data to a client, may
+               send along a cookie, which the client retains after the HTTP
+               connection closes. A server can use this mechanism to maintain
+               persistent client-side state information for HTTP-based
+               applications, retrieving the state information in later
+               connections.
+</template>
+    </category>
+    <category>
+      <pattern> what is Corruption</pattern>
+      <template>
+               A threat action that undesirably alters system operation by
+               adversely modifying system functions or data.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cost Benefit Analysis</pattern>
+      <template>
+               A cost benefit analysis compares the cost of implementing
+               countermeasures with the value of the reduced risk.
+</template>
+    </category>
+    <category>
+      <pattern> what is a Countermeasure</pattern>
+      <template>
+               Reactive methods used to prevent an exploit from successfully
+               occurring once a threat has been detected. Intrusion Prevention
+               Systems (IPS) commonly employ countermeasures to prevent intruders
+               form gaining further access to a computer network. Other counter
+               measures are patches, access control lists and malware filters.
+</template>
+    </category>
+    <category>
+      <pattern> what are Covert Channels</pattern>
+      <template>
+               Covert Channels are the means by which information can be
+               communicated between two parties in a covert fashion using normal
+               system operations. For example by changing the amount of hard
+               drive space that is available on a file server can be used to
+               communicate information.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cron</pattern>
+      <template>
+               Cron is a Unix application that runs jobs for users and
+               administrators at scheduled times of the day.
+</template>
+    </category>
+    <category>
+      <pattern> what is aCrossover Cable</pattern>
+      <template>
+               A crossover cable reverses the pairs of cables at the other end
+               and can be used to connect devices directly together.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cryptanalysis</pattern>
+      <template>
+               The mathematical science that deals with analysis of a
+               cryptographic system in order to gain knowledge needed to break or
+               circumvent the protection that the system is designed to provide.
+               In other words, convert the cipher text to plaintext without
+               knowing the key. Cryptographic Algorithm or Hash An algorithm that
+               employs the science of cryptography, including encryption
+               algorithms, cryptographic hash algorithms, digital signature
+               algorithms, and key agreement algorithms.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cut Through</pattern>
+      <template>
+               Cut-Through is a method of switching where only the header of a
+               packet is read before it is forwarded to its destination.
+</template>
+    </category>
+    <category>
+      <pattern> what is Cyclic Redundancy Check or CRC</pattern>
+      <template>
+               A type of checksum algorithm that is not a cryptographic hash but
+               is used to implement data integrity service where accidental
+               changes to data are expected.
+</template>
+    </category>
+    <category>
+      <pattern>what is integrity</pattern>
+      <template>Integrity refers to the accuracy of data. Data should remain unchanged from its original form unless the change has been authorized.</template>
+    </category>
+
+  
+<category>
+      <pattern>ARE YOU A<SET>BOTSYNONIMS</SET></pattern>
+      <template>Does it matter</template>
+    </category>
+  <category>
+      <pattern>HOW DO I BREAK INTO HACKING</pattern>
+      <template>
+                
+<srai>WHAT ARE THE PROSPECTS IN CYBER SECURITY</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>I WANT TO HACK *</pattern>
+      <template>Hmm, good idea but do ask nicely first or participate in a bug bounty. If you have done so then do the following.
+Scan the target
+see what is running
+Figure out how to exploit it
+ also read books at<a href="https://www.amazon.com/Best-Sellers-Books-Computer-Hacking/zgbs/books/3648">Best Sellers in Computer Hacking</a>
+ </template>
+    </category>
+    <category>
+<pattern>i want to hack</pattern>
+<template>
+<srai>I WANT TO HACK *</srai>
+</template>
+</category>
+<category>
+      <pattern>I WANT TO BE A HACKER</pattern>
+      <template>
+        <srai>I want to hack*</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>I WANT TO HACK THE*</pattern>
+      <template>
+        <srai>I want to hack*</srai>
+      </template>
+    </category>
+<category>
+<pattern>how do i hack</pattern>
+<template>
+<srai>I WANT TO HACK *</srai>
+</template>
+</category>
+<category>
+<pattern>how do i hack *</pattern>
+<template>
+<srai>how do i hack</srai>
+</template>
+</category>
+ <category>
+ <pattern> Are you confident that you know all the latest vulnerabilities and industry knowledge</pattern>
+<template>
+<srai>How do you stay updated</srai>
+</template>
+</category>
+<category><pattern>how * latest vulnerabilities</pattern><template><srai>How do you stay updated</srai></template></category>
+ <category><pattern>what will you do in a crisis</pattern>
+<template>
+      My focus is on root cause analysis.  I would determine what assets have been compromised and alert relevant stake holders. I would then put crisis management plans into operations and where necessary bring in outside help especially for areas such as forensic analysis. I would be the single point of contact especially for the board during the duration of the crisis.
+</template>
+ </category>
+ <category><pattern>what will you do if a breach occurs</pattern><template><srai>what will you do in a crisis</srai></template></category>
+ <category><pattern>How will you manage incidents</pattern><template><srai>what will you do in a crisis</srai></template></category>
+ <category><pattern>what keeps you awake *</pattern><template><srai>what keeps you awake at night</srai></template></category>]
+<category><pattern>Did you sleep *</pattern><template><srai>what keeps you awake at night</srai></template></category>
+<category><pattern>what will you do in a cyber attack</pattern><template><srai>what will you do in a crisis</srai></template></category>
+<category><pattern>HOW do I<set>defendsynonyms</set> data</pattern><template>
+      It depends on the size of your organization. however, mostly, you need to keep regular backups, test them, ensure that all systems irrespective of their place in your network are fully patched.
+</template></category>
+<category><pattern>how do i<set>defendsynonyms</set> against<set>malwaresynonims</set></pattern><template>
+      the best defense is prevention. rapid patching across the entire landscape, frequent testing of software and using native features of operating systems for protection will help.
+</template>
+</category>
+
+</aiml>

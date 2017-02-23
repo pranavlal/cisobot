@@ -1,0 +1,131 @@
+use Libraries.Game.Game
+use botPackage.all
+use Libraries.Game.Graphics.Drawable
+use Libraries.Game.DesktopDisplay
+use Libraries.Interface.Events.KeyboardListener
+use Libraries.Interface.Events.KeyboardEvent
+use Libraries.Language.Errors.Error
+use Libraries.Interface.TextBox
+use Libraries.Game.Graphics.Label
+use Libraries.Sound.Speech
+use Libraries.System.SystemHelper
+use Libraries.System.File
+        use Libraries.System.FileWriter
+use httprq.all
+
+class Main is Game, KeyboardListener
+Drawable avatar
+number screenHeight=0
+number screenWidth=0
+
+botHandler bt
+TextBox botInput
+    Label botOutput
+Label explanation
+
+
+action Main
+me:SetGameName("CISO")
+        StartGame()
+    end
+
+    action CreateGame
+DesktopDisplay d
+
+screenWidth=d:GetWidth()
+screenHeight=d:GetHeight()
+
+botInput:Initialize(screenWidth,screenHeight/2)
+botInput:SetPosition(100,300)
+
+Add(botInput)
+AddKeyboardListener(botInput)
+AddKeyboardListener(me)
+botOutput:SetPosition(100,200)
+botOutput:SetText("")
+botOutput:SetWidth(screenWidth)
+Add(botOutput)
+explanation:SetWidth(screenWidth/3)
+explanation:SetPosition(50,100)
+explanation:SetText("ask me about cyber security:")
+Add(explanation)
+botOutput:Show()
+avatar:Load("resources/smilingMan.jpg")
+//Add(avatar)
+avatar:SetPosition(50,me:GetScreenHeight()/1.9)
+avatar:Show()
+botInput:Show()
+say explanation:GetText()
+
+end
+action logStuff(Text dl)
+File f
+        FileWriter writer
+f:SetPath("BotLog.txt")
+check
+writer:OpenForWriteAppend(f)
+        writer:WriteLine(dl)
+        writer:PushToDisk()
+writer:Close()
+detect e is Error
+say e:GetErrorMessage()
+end
+    end
+action getAnswer(Text question)  returns text
+
+HttpRequestManager rq
+
+ text result=rq:searchDuckduckgo(question)
+output "about to type search result"
+output result
+return result 
+end
+action PressedKey(KeyboardEvent event)
+
+
+botOutput:SetText("")
+
+Speech talk
+talk:Say(event:ToText(event:keyCode), false)
+
+
+        if event:keyCode = event:ENTER
+text ans=""
+check
+ans=bt:botConverse(botInput:GetInput())
+
+
+
+if ans:Contains("unknown")
+ans=getAnswer(botInput:GetInput())
+elseif ans:IsEmpty()
+ans="It depends...."
+elseif ans:GetSize()<=5
+ans="It depends...."
+end
+
+detect e is Error
+botOutput:SetText( e:GetErrorMessage())
+say e:GetErrorMessage()
+end
+
+botOutput:SetText(ans)
+
+say ans
+SystemHelper sh
+sh:Sleep(3200) 
+ logStuff(botInput:GetInput())
+logStuff(ans)
+botInput:EmptyAll()
+say explanation:GetText()
+end
+end
+    /*
+        The update action is called on every "frame" of animation in a game. This
+        action should be used to do operations on items. So, for example, we 
+        might use this action to change frames of animation, to rotate items, 
+        or to make creatures jump.
+    */
+    action Update(number seconds)
+    end
+end
