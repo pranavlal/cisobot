@@ -1,0 +1,74 @@
+use httprq.all
+use botPackage.all
+use Libraries.Web.WebResponder
+use Libraries.Web.WebResponse
+use Libraries.Web.WebRequest 
+use Libraries.Language.Errors.Error
+use Libraries.System.SystemHelper
+use Libraries.System.File
+        use Libraries.System.FileWriter
+
+
+class Main is  WebResponder 
+action Respond(WebRequest request) returns WebResponse
+text qs="n"
+text result=""
+        WebResponse response
+qs=request:GetParameter("questiontext")
+if qs:IsEmpty()
+result="Ask me a question"
+else
+result= getAnswer(qs) 
+end
+response:SetPageText(result)
+ logStuff(qs)
+ logStuff(result)
+return response
+end
+action getAnswer(Text question)  returns text
+botHandler bt
+HttpRequestManager rq
+
+
+
+ text result=""
+result=bt:botConverse(question)
+
+if result:Contains("unknown")
+result=rq:searchDuckduckgo(question)
+elseif result:IsEmpty()
+result="It depends...."
+elseif result:GetSize()<=5
+result="It depends...."
+end
+ 
+
+
+output result
+ logStuff("search complete")
+return result 
+end
+
+action logStuff(Text dl)
+File f
+        FileWriter writer
+f:SetPath("BotLog.txt")
+check
+writer:OpenForWriteAppend(f)
+        writer:WriteLine(dl)
+        writer:PushToDisk()
+writer:Close()
+detect e is Error
+output(e:GetErrorMessage())
+end
+end
+ action Main
+/*
+WebResponse wr
+WebRequest wq
+wq:AddParameter("questiontext","what is information security")
+wr=Respond(wq)
+*/
+end    
+end
+

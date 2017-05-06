@@ -1,0 +1,5 @@
+package botPackage 
+class botHandler 
+
+system action botConverse(text rq) returns text
+end
